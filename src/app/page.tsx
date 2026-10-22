@@ -60,17 +60,13 @@ export default function Home() {
           <section className="w-full max-w-sm sm:max-w-md mx-auto my-auto z-10">
             <div className="bg-slate-900/80 backdrop-blur-md border border-slate-700/60 rounded-3xl p-6 sm:p-8 shadow-2xl shadow-indigo-950/60 flex flex-col items-center text-center transition-all">
               {/* Mascot Image */}
-              <div className="relative mb-6 group">
-                <div className="absolute -inset-1 rounded-2xl bg-gradient-to-r from-blue-500 to-cyan-400 opacity-60 blur-md group-hover:opacity-90 transition duration-300" />
-                <div className="relative w-36 h-36 sm:w-44 sm:h-44 rounded-2xl overflow-hidden border-2 border-white/20 bg-slate-800 flex items-center justify-center shadow-lg">
+              <div className="relative mb-6 group flex justify-center">
+                <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-2xl overflow-hidden border-2 border-white/20 bg-slate-800 flex items-center justify-center shadow-lg relative">
                   {!imageError ? (
-                    <Image
+                    <img
                       src="/inu_mascot.jpg"
                       alt="인천대학교 마스코트 횃불이"
-                      fill
-                      sizes="(max-width: 640px) 144px, 176px"
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                      priority
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                       onError={() => setImageError(true)}
                     />
                   ) : (
