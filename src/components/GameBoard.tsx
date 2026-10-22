@@ -930,9 +930,10 @@ export default function GameBoard({ userName, onRestart, onExit }: GameBoardProp
           <div className="flex items-center gap-2 sm:gap-3">
             <div className="relative w-8 h-8 sm:w-9 sm:h-9 rounded-full overflow-hidden border border-cyan-400/50 bg-slate-800 shrink-0">
               <Image
-                src="/Mascot.jpg"
+                src="/inu_mascot.jpg"
                 alt="횃불이"
                 fill
+                sizes="36px"
                 className="object-cover"
                 onError={(e) => {
                   (e.target as HTMLElement).style.display = "none";

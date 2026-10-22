@@ -65,7 +65,7 @@ export default function Home() {
                 <div className="relative w-36 h-36 sm:w-44 sm:h-44 rounded-2xl overflow-hidden border-2 border-white/20 bg-slate-800 flex items-center justify-center shadow-lg">
                   {!imageError ? (
                     <Image
-                      src="/Mascot.jpg"
+                      src="/inu_mascot.jpg"
                       alt="인천대학교 마스코트 횃불이"
                       fill
                       sizes="(max-width: 640px) 144px, 176px"
