@@ -928,18 +928,19 @@ export default function GameBoard({ userName, onRestart, onExit }: GameBoardProp
         <div className="w-full sm:w-auto flex items-center justify-between sm:justify-start gap-2 sm:gap-4">
           {/* Player & Mascot Info */}
           <div className="flex items-center gap-2 sm:gap-3">
-            <div className="relative w-8 h-8 sm:w-9 sm:h-9 rounded-full overflow-hidden border border-cyan-400/50 bg-slate-800 shrink-0">
-              <Image
-                src="/inu_mascot.jpg"
-                alt="횃불이"
-                fill
-                sizes="36px"
-                className="object-cover"
-                onError={(e) => {
-                  (e.target as HTMLElement).style.display = "none";
-                }}
-              />
-            </div>
+            <div
+                className="relative rounded-full overflow-hidden border border-cyan-400/50 bg-slate-800 shrink-0"
+                style={{ width: "36px", height: "36px" }}
+              >
+                <img
+                  src="/inu_mascot.jpg"
+                  alt="횃불이"
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
+                  onError={(e) => {
+                    (e.target as HTMLElement).style.display = "none";
+                  }}
+                />
+              </div>
             <div>
               <div className="text-[10px] sm:text-[11px] text-slate-400">플레이어</div>
               <div className="font-bold text-cyan-300 text-xs sm:text-sm truncate max-w-[90px] sm:max-w-none">{userName}</div>
